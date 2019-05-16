@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    tools:context="com.sky.data.ShareActivity">
+
+    <EditText
+        android:id="@+id/share_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入账号"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/share_text_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="请输入密码"
+        android:textSize="25sp"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/share_button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:text="登录"
+        android:textSize="25sp" />
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:textAllCaps="false"
+        android:maxLines="1"
+        android:text="share Preferences方式存储数据"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/share_button_read"
+        android:textAllCaps="false"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:text="share Preferences方式读取数据"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/share_text_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="将读取到的账号"
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/share_text_read_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="将读取到的密码"
+        android:textSize="25sp" />
+
+</LinearLayout>

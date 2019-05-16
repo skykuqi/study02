@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/main_button_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="跳转到IntentActivity"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+    <Button
+        android:id="@+id/main_button_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="andoid Fragment碎片"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+    <Button
+        android:id="@+id/main_button_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="andoid 广播"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+    <Button
+        android:id="@+id/main_button_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="andoid 标准广播"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+    <Button
+        android:id="@+id/main_button_myradio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="andoid 自定义动态广播"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+    <Button
+        android:id="@+id/main_button_local"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="andoid 本地广播"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+    <Button
+        android:id="@+id/main_button_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="一个列表示例 区别平板 手机"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+
+    <Button
+        android:id="@+id/main_button_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Android Service"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+
+    <Button
+        android:id="@+id/main_button_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Android 数据存储"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    tools:context="com.sky.data.IoActivity">
+
+    <EditText
+        android:id="@+id/io_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入文字"
+        android:textSize="25sp" />
+
+
+    <Button
+        android:id="@+id/io_button_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:text="退出登录 发送广播"
+        android:textSize="25sp" />
+    <Button
+        android:id="@+id/io_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:text="IO流方式存储数据"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/io_button_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:text="IO流方式读取数据"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/io_text_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="将读取到的数据"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp" />
+
+
+</LinearLayout>
