@@ -11,6 +11,7 @@
      android:theme="@style/AppTheme" 主题 代表App的基础色调
     -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -52,7 +53,11 @@
         <activity android:name="com.sky.service.MyServiceActivity" />
         <activity android:name="com.sky.data.DataActivity" />
         <activity android:name="com.sky.data.IoActivity" />
-        <activity android:name="com.sky.data.ShareActivity"></activity>
+        <activity android:name="com.sky.data.ShareActivity" />
+        <activity android:name="com.sky.data.SharePreferencesDemoActivity" />
+        <activity android:name="com.sky.sqlite.SqliteActivity" />
+        <activity android:name="com.sky.sqlite.LitepalActivity" />
+        <activity android:name="com.sky.permission.PermissionActivity"></activity>
     </application>
 
 </manifest>

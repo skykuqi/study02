@@ -26,6 +26,6 @@ public class News {
     }
 
     public String getNewsContent() {
-        return newsContent;
+            return newsContent;
     }
 }

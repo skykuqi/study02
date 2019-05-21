@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <Button
         android:id="@+id/main_button_intent"
         android:layout_width="match_parent"
@@ -60,15 +62,16 @@
         android:textAllCaps="false"
         android:textSize="20sp"
         android:background="@drawable/button_selector"/>
+
     <Button
         android:id="@+id/main_button_example"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
         android:text="一个列表示例 区别平板 手机"
         android:textAllCaps="false"
-        android:textSize="20sp"
-        android:background="@drawable/button_selector"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/main_button_service"
@@ -90,5 +93,48 @@
         android:textSize="20sp"
         android:background="@drawable/button_selector"/>
 
+    <Button
+        android:id="@+id/main_button_share_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="sharePreferences 密码存储示例"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+
+    <Button
+        android:id="@+id/main_button_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Android Sqlite"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+
+    <Button
+        android:id="@+id/main_button_litepal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Litepal 的使用"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+
+    <Button
+        android:id="@+id/main_button_permission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Android Permission"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+
+
 
 </LinearLayout>
+
+</ScrollView>

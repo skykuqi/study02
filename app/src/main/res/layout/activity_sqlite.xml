@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    tools:context="com.sky.sqlite.SqliteActivity">
+
+    <Button
+        android:id="@+id/sqlite_button_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:text="创建数据库"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/sqlite_edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="请输入书名"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/sqlite_edit_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="请输入作者名"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/sqlite_edit_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="请输入价格"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/sqlite_button_insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:text="添加数据"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/sqlite_button_insert_sql"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:text="添加数据 Sql语句方式"
+        android:textAllCaps="false"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/sqlite_button_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:text="修改数据"
+        android:textAllCaps="false"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/sqlite_button_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:text="删除数据"
+        android:textAllCaps="false"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/sqlite_button_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_selector"
+        android:text="查询数据"
+        android:textAllCaps="false"
+        android:textSize="25sp" />
+</LinearLayout>
