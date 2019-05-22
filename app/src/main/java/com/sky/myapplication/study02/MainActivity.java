@@ -1,6 +1,7 @@
 package com.sky.myapplication.study02;
 
 import android.content.ComponentName;
+import android.content.ContentProvider;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.sky.content.ContentProvideActivity;
 import com.sky.data.DataActivity;
 import com.sky.data.SharePreferencesDemoActivity;
 import com.sky.listexample.ListExampleActivity;
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button main_button_intent, main_button_fragment, main_button_radio
             , main_button_normal,main_button_local,main_button_example
             ,main_button_myradio,main_button_service,main_button_data,main_button_sqlite,main_button_share_demo
-            ,main_button_litepal,main_button_permission;
+            ,main_button_litepal,main_button_permission,main_button_content;
     //唯一请求码
     public static final int REQUEST_CODE = 55;
 
@@ -177,6 +179,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PermissionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        main_button_content = findViewById(R.id.main_button_content);
+        main_button_content.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ContentProvideActivity.class);
                 startActivity(intent);
             }
         });

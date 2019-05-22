@@ -12,10 +12,10 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -61,9 +61,19 @@
         <activity android:name="com.sky.data.SharePreferencesDemoActivity" />
         <activity android:name="com.sky.sqlite.SqliteActivity" />
         <activity android:name="com.sky.sqlite.LitepalActivity" />
-        <activity android:name="com.sky.permission.PermissionActivity">
-
-        </activity>
+        <activity android:name="com.sky.permission.PermissionActivity"/>
+        <activity android:name="com.sky.content.ContentProvideActivity"/>
+        <!--四大组件都需要声明
+        android:authorities=""  类似receiver的name
+        声明当前有效并且其他软件可以使用到
+         android:exported="true"
+         android:enabled="true"
+        -->
+        <provider
+            android:name="com.sky.content.TestProvider"
+            android:authorities="com.sky.contentProvide"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>
