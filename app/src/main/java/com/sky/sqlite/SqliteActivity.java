@@ -1,6 +1,7 @@
 package com.sky.sqlite;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -93,7 +94,18 @@ public class SqliteActivity extends AppCompatActivity {
                     });
                     break;
                 case R.id.sqlite_button_query:
-                    
+                    Cursor cursor = database.query("book",new String[]{
+                            "author","name","price","id"
+                    },"id > 6",null,null,null,null);
+                    cursor.moveToFirst();
+                    do{
+                        String name1 = cursor.getString(cursor.getColumnIndex("name"));
+                        String author1 = cursor.getString(cursor.getColumnIndex("author"));
+                        String id = cursor.getString(cursor.getColumnIndex("id"));
+                        String price1 = cursor.getString(cursor.getColumnIndex("price"));
+                        System.out.println("name1: " + name1 + " id: " + id + " author1: " + author1 +
+                        " price1: " + price1);
+                    }while (cursor.moveToNext());
                     break;
             }
         }
