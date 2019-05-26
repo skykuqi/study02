@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.sky.myapplication.study02.MainActivity;
 import com.sky.myapplication.study02.R;
@@ -51,30 +52,90 @@ public class NoticeActivity extends AppCompatActivity {
                     //启动通知
                     builder.startForeground(1, notification);
                 }*/
-                Intent intent = new Intent(NoticeActivity.this, MainActivity.class);
-                PendingIntent pendingIntent = PendingIntent.getActivity(NoticeActivity.this,0,intent,0);
-                NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-                Notification notification = new NotificationCompat.Builder(NoticeActivity.this)
-                        .setContentTitle("来自星星的你")
-                        /* .setContentText("新闻十三分新闻十三分新闻十三分新闻十三分新闻十三分" +
-                                 "新闻十三分新闻十三分新闻十三分新闻十三分新闻十三分")    //默认无法显示过长的text*/
-                        .setWhen(System.currentTimeMillis())
-                        .setSmallIcon(R.mipmap.ic_launcher)
-                        .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
-                        .setStyle(new NotificationCompat.BigTextStyle().bigText("新闻十三分新闻十三分新闻十三分新闻十三分新闻十三分" +
-                                "新闻十三分新闻十三分新闻十三分新闻十三分新闻十三分"))       //可以显示所有的通知
-                        .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(
-                                BitmapFactory.decodeResource(getResources(), R.drawable.github) //这只大图片显示
-                        ))
-//                        .setAutoCancel(true)        //点击关闭
-//                        .setSound(Uri.fromFile(new File("raw/play.mp3")))       //寻找通知音乐
-                        .setVibrate(new long[]{
-                                0, 1000, 0, 1000
-                        })
-                        .setContentIntent(pendingIntent)
-                        .build();
-                manager.notify(8, notification);
+                sendNotice_3();
             }
         });
+
+    }
+
+    /**
+     * 旧版本的通知发送
+     */
+    private void sendNotice_1() {
+        Intent intent = new Intent(NoticeActivity.this, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(NoticeActivity.this, 0, intent, 0);
+        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        Notification notification = new NotificationCompat.Builder(NoticeActivity.this)
+                .setContentTitle("来自星星的你")
+                /* .setContentText("新闻十三分新闻十三分新闻十三分新闻十三分新闻十三分" +
+                         "新闻十三分新闻十三分新闻十三分新闻十三分新闻十三分")    //默认无法显示过长的text*/
+                .setWhen(System.currentTimeMillis())
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
+                .setStyle(new NotificationCompat.BigTextStyle().bigText("新闻十三分新闻十三分新闻十三分新闻十三分新闻十三分" +
+                        "新闻十三分新闻十三分新闻十三分新闻十三分新闻十三分"))       //可以显示所有的通知
+                .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(
+                        BitmapFactory.decodeResource(getResources(), R.drawable.github) //这只大图片显示
+                ))
+//                        .setAutoCancel(true)        //点击关闭
+//                        .setSound(Uri.fromFile(new File("raw/play.mp3")))       //寻找通知音乐
+                .setVibrate(new long[]{
+                        0, 1000, 0, 1000
+                })
+                .setContentIntent(pendingIntent)
+                .build();
+        manager.notify(8, notification);
+    }
+
+    /**
+     * 新版本的同时发送
+     */
+    private void sendNotice_2() {
+        Notification notification = new Notification.Builder(NoticeActivity.this)
+                .setSmallIcon(R.mipmap.ic_launcher) // 设置状态栏内的小图标
+//                .setContentTitle(getResources().getString(R.string.app_name))
+                .setContentTitle("来自星星的你")
+                .setContentText("新闻十三分") // 设置上下文内容
+                .setWhen(System.currentTimeMillis())// 设置该通知发生的时间
+                .setSmallIcon(R.mipmap.ic_launcher) //设置小图标
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher)).build();   //设置大图标
+        //启动通知
+        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        manager.notify(8, notification);
+    }
+
+    /**
+     * 新版本的同时发送 android8.0及以上
+     */
+    private void sendNotice_3() {
+        Notification.Builder builder = new Notification.Builder(NoticeActivity.this)
+                .setSmallIcon(R.mipmap.ic_launcher) // 设置状态栏内的小图标
+//                .setContentTitle(getResources().getString(R.string.app_name))
+                .setContentTitle("来自星星的你")
+                .setContentText("新闻十三分") // 设置上下文内容
+                .setWhen(System.currentTimeMillis())// 设置该通知发生的时间
+                .setSmallIcon(R.mipmap.ic_launcher) //设置小图标
+                .setDefaults(Notification.DEFAULT_ALL)  //使用默认的声音、振动、闪光
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));   //设置大图标
+        //启动通知
+        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+//            builder.setChannelId("sky123");
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            System.out.println("检测到手机系统为8.0及以上");
+            //修改安卓8.0以上系统报错
+            NotificationChannel notificationChannel =
+                    new NotificationChannel("sky1234", "skyNotification", NotificationManager.IMPORTANCE_HIGH);
+            notificationChannel.enableLights(true);//如果使用中的设备支持通知灯，则说明此通知通道是否应显示灯
+            notificationChannel.setShowBadge(true);//是否显示角标
+            notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_SECRET);
+            builder.setChannelId("sky1234");
+            manager.createNotificationChannel(notificationChannel);
+        }
+        Notification notification = builder.build();
+//        notification.defaults = Notification.DEFAULT_SOUND; //设置为默认的声音
+        //启动通知
+        manager.notify(10,notification);
     }
 }
