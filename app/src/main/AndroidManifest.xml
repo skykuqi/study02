@@ -79,7 +79,8 @@
 
         <activity android:name="com.sky.webview.WebViewActivity" />
         <activity android:name="com.sky.notice.NoticeActivity" />
-        <activity android:name="com.sky.fragment.ViewPagerActivity"></activity>
+        <activity android:name="com.sky.fragment.ViewPagerActivity" />
+        <activity android:name="com.sky.network.NetWorkActivity"></activity>
     </application>
 
 </manifest>

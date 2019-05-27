@@ -172,6 +172,16 @@
         android:textAllCaps="false"
         android:textSize="20sp"
         android:background="@drawable/button_selector"/>
+    <Button
+        android:id="@+id/main_button_netWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Android NetWork"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"/>
+
 
 
 

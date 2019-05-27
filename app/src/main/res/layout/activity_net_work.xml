@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sky.network.NetWorkActivity"
+    android:orientation="vertical"
+    android:paddingTop="15dp">
+    <Button
+        android:id="@+id/network_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:textSize="25sp"
+        android:text="获取数据"/>
+    <TextView
+        android:id="@+id/network_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:hint="获取到的数据"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/network_button_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:text="Post 请求"/>
+
+    <TextView
+        android:id="@+id/network_text_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:hint="获取到的数据--POST"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/network_button_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:text="获取数据--基于框架"/>
+
+    <TextView
+        android:id="@+id/network_text_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:hint="获取到的数据--基于框架"
+        android:gravity="center"/>
+</LinearLayout>
