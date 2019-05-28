@@ -80,7 +80,11 @@
         <activity android:name="com.sky.webview.WebViewActivity" />
         <activity android:name="com.sky.notice.NoticeActivity" />
         <activity android:name="com.sky.fragment.ViewPagerActivity" />
-        <activity android:name="com.sky.network.NetWorkActivity"></activity>
+        <activity android:name="com.sky.network.NetWorkActivity" />
+        <activity
+            android:name="com.sky.extra.ExtraActivity"
+            android:label="UI设计页面" />
+        <activity android:name="com.sky.extra.MyActionBarActivity"></activity>
     </application>
 
 </manifest>

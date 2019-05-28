@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.sky.content.ContentProvideActivity;
 import com.sky.data.DataActivity;
 import com.sky.data.SharePreferencesDemoActivity;
+import com.sky.extra.ExtraActivity;
 import com.sky.fragment.ViewPagerActivity;
 import com.sky.listexample.ListExampleActivity;
 import com.sky.network.NetWorkActivity;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             , main_button_normal,main_button_local,main_button_example
             ,main_button_myradio,main_button_service,main_button_data,main_button_sqlite,main_button_share_demo
             ,main_button_litepal,main_button_permission,main_button_content,main_button_webView,main_button_notice
-            ,main_button_viewPaper,main_button_netWork;
+            ,main_button_viewPaper,main_button_netWork,main_button_extra;
     //唯一请求码
     public static final int REQUEST_CODE = 55;
 
@@ -227,6 +228,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, NetWorkActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        main_button_extra = findViewById(R.id.main_button_extra);
+        main_button_extra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ExtraActivity.class);
                 startActivity(intent);
             }
         });

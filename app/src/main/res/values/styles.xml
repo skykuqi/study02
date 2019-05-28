@@ -3,11 +3,14 @@
     <!-- Base application theme.
      parent="Theme.AppCompat.Light.DarkActionBar" 默认存在标题
      Theme.AppCompat.Light.NoActionBar  不存在标题栏-->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!--取消标题显示-->
+        <!--<item name="windowNoTitle">true</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
     </style>
 
 </resources>

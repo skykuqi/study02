@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#5eafed" />
+    <!-- android:dashWidth="10dp" 每一节的长度
+    android:dashGap="10dp"  间隔的距离
+    -->
+    <stroke
+        android:width="5dp"
+        android:color="#000000"
+        android:dashWidth="10dp"
+        android:dashGap="10dp" />
+    <!--gradient 渐变标签
+     android:type=""    类型标签
+     linear             线性渐变
+     radial             雷达
+     sweep              扫描
+
+      android:angle="" linear可用 必须设置该标签
+      android:gradientRadius="180"
+      android:centerColor="#ffffff"         中间的颜色
+      android:startColor="#57b3ff"          起始颜色
+      android:endColor="#69fc76"            末端颜色
+       android:gradientRadius="360"         radial中心大小
+     -->
+    <gradient
+        android:centerColor="#fa775d"
+        android:endColor="#69fc76"
+        android:gradientRadius="360"
+        android:startColor="#57b3ff"
+        android:type="linear" />
+
+</shape>
