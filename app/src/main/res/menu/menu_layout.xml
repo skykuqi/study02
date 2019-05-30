@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sky.extra.MyActionBarActivity">
+    <!-- app:showAsAction="ifRoom" 属性定义该item是否显示的展示在AcitonBar中
+    ifRoom  表示当actionBar中存在足够空间时,显示
+    never   表示从不显示,那么必然会被放入
+    always 表示总是显示
+    -->
     <item
         android:id="@+id/add"
-        android:title="添加" />
+        android:icon="@drawable/add_contacts"
+        android:title="添加"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/remove"
-        android:title="删除" />
+        android:icon="@drawable/remove"
+        android:title="删除"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/more"
+        android:title="更多"
+        app:showAsAction="never" />
+
 </menu>

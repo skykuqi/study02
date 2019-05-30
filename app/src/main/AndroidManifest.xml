@@ -84,7 +84,9 @@
         <activity
             android:name="com.sky.extra.ExtraActivity"
             android:label="UI设计页面" />
-        <activity android:name="com.sky.extra.MyActionBarActivity"></activity>
+        <activity android:name="com.sky.extra.MyActionBarActivity"
+            android:logo="@drawable/fruit"
+            android:label="UI页面"/>
     </application>
 
 </manifest>

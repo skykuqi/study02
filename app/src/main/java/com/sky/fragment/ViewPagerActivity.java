@@ -33,7 +33,7 @@ public class ViewPagerActivity extends AppCompatActivity {
             RightFragment rightFragment = new RightFragment();
             fragments.add(leftFragment);
             fragments.add(rightFragment);
-             myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
+            myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
             viewPager_pager.setAdapter(myPagerAdapter);
             viewPager_pager.setCurrentItem(0);
             //预加载页面
@@ -43,9 +43,9 @@ public class ViewPagerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                myPagerAdapter.get(1);
-                if ( viewPager_pager.getCurrentItem() == 0) {
-                        viewPager_pager.setCurrentItem(1);
-                }else {
+                if (viewPager_pager.getCurrentItem() == 0) {
+                    viewPager_pager.setCurrentItem(1);
+                } else {
                     viewPager_pager.setCurrentItem(0);
                 }
             }
